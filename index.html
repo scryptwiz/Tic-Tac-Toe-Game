@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blaka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="full_container">
+        <!-- Choose Mode -->
+        <div class="mid" id="mid_choose">
+            <span class="logo_cont">
+                <span class="logo">
+                    <h1 class="x">X</h1>
+                    <div class="shade_x"></div>
+                </span>
+                <span class="logo">
+                    <h1 class="o">O</h1>
+                    <div class="shade_o"></div>
+                </span>
+            </span>
+            <h3 class="choose_text">Choose your play mode</h3>
+            <div class="btn_stack">
+                <button class="playbtn1">With AI</button>
+                <button class="playbtn2" onclick="playWithBtn()">With a friend</button>
+            </div>
+        </div>
+        <!-- Pick side -->
+        <div class="mid" id="pick_side">
+            <div class="quit">
+                <img onclick="toMain()" src="/assets/arrow.png" alt="">
+            </div>
+            <h3 class="choose_text">Pick your side</h3>
+            <span class="logo_cont">
+                <span class="logo">
+                    <h1 class="x">X</h1>
+                    <div class="shade_x"></div>
+                </span>
+                <span class="logo">
+                    <h1 class="o">O</h1>
+                    <div class="shade_o"></div>
+                </span>
+            </span>
+            <div class="input_cont">
+                <span class="player_cont">
+                    <label>Player X</label>
+                    <input id="playerX" name="playerX" type="text" placeholder="Your username">
+                </span>
+                <span class="player_cont">
+                    <label>Player O</label>
+                    <input id="playerO" name="playerO" type="text" placeholder="Your username">
+                </span>
+                <div class="start_cont">
+                    <button class="startbtn" onclick="start()">Start</button>
+                </div>
+            </div>
+        </div>
+        <!-- Multiplayer Game -->
+        <div class="mid board" id="game_cont">
+            <div class="score_board">
+                <small class="players" id="player1">Kelvin</small>
+                <div class="score_cont">
+                    <small id="player_x_score" class="score">0</small>
+                    <small class="score">-</small>
+                    <small id="player_o_score" class="score">0</small>
+                </div>
+                <small class="players" id="player2">Kelvin</small>
+            </div>
+            <div class="boxes_cont" id="game_min">
+                <span class="row">
+                    <div id="0" class="play1 cell"></div>
+                    <div id="1" class="play2 cell"></div>
+                    <div id="2" class="play3 cell"></div>
+                </span>
+                <span class="row">
+                    <div id="3" class="play4 cell"></div>
+                    <div id="4" class="play5 cell"></div>
+                    <div id="5" class="play6 cell"></div>
+                </span>
+                <span class="row">
+                    <div id="6" class="play7 cell"></div>
+                    <div id="7" class="play8 cell"></div>
+                    <div id="8" class="play9 cell"></div>
+                </span>
+            </div>
+            <div class="quit">
+                <button id="alert-btn-danger" onclick="quit()">Quit</button>
+                <button id="alert-btn-danger" onclick="restart()">Reset</button>
+            </div>
+        </div>
+        <!-- AI Game -->
+        <!-- Alert Section -->
+        <div id="winning_alert">
+            <div id="winner_cont">
+                <h1 id="alert-color">Alert</h1>
+                <p id="alert-content"></p>
+                <div id="alert_btn_cont">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script/index.js"></script>
+</html>
